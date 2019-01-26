@@ -1,5 +1,6 @@
 package com.ourproject.mohankumardhakal.agroproject.AcitivityClasses;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,24 +10,29 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.ourproject.mohankumardhakal.agroproject.FragmentClasses.CustomerPostsFrame;
 import com.ourproject.mohankumardhakal.agroproject.FragmentClasses.FarmersPostFrame;
 import com.ourproject.mohankumardhakal.agroproject.R;
 public class MainActivity extends AppCompatActivity {
-    ViewPager pager;
-    TextView tv1, tv2;
+   // ViewPager pager;
+    //TextView tv1, tv2;
+    Button bfarmer,bcustomer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pager = findViewById(R.id.container);
-        tv1 = findViewById(R.id.tab1);
-        tv2 = findViewById(R.id.tab2);
+       // pager = findViewById(R.id.container);
+
+        bfarmer=findViewById(R.id.farmer);
+        bcustomer=findViewById(R.id.customer);
+
+       // tv1 = findViewById(R.id.tab1);
+       // tv2 = findViewById(R.id.tab2);
         //setsAdapter for different fragments
-        pager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+/*        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -48,9 +54,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+*/
+        bfarmer.setOnClickListener(new View.OnClickListener() {
+                                    public void onClick(View view) {
+                                        Intent myIntent = new Intent(view.getContext(), Farmer_login.class);
+                                        startActivityForResult(myIntent, 0);
+                                    }});
+
+}
+
 
     //knows which tab is clicked in viewPager
-    public void tabClick(View view) {
+/*    public void tabClick(View view) {
         if (view.getId() == R.id.tab1) {
             pager.setCurrentItem(0);
         } else if (view.getId() == R.id.tab2) {
