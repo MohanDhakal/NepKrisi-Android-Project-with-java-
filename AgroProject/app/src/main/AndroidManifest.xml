@@ -16,8 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AcitivityClasses.Farmer_login"></activity>
-
+        <activity android:name=".AcitivityClasses.home_activity" />
+        <activity android:name=".AcitivityClasses.Farmer_login" />
+        <activity android:name=".AcitivityClasses.Register_farmer" />
+        <activity android:name=".AcitivityClasses.Farmer_profile_form" />
+        <activity android:name=".AcitivityClasses.Customer_signin" />
+        <activity android:name=".AcitivityClasses.Register_customer" />
+        <activity android:name=".AcitivityClasses.Application_main" />
+        <activity android:name=".AcitivityClasses.SearchActivity" />
+        <activity android:name=".AcitivityClasses.ProfileActivity" />
+        <activity android:name=".AcitivityClasses.customer_info_entry"></activity>
     </application>
 
 </manifest>

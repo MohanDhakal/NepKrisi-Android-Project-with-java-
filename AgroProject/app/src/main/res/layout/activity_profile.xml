@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcitivityClasses.ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/ptoolbar"
+            layout="@layout/snippet_profile_toolbar">
+
+        </include>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/vew"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/pfirst_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="220dp"
+            android:text="Sriza"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/plast_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:layout_toRightOf="@id/pfirst_name"
+            android:paddingLeft="5dp"
+            android:text="Shrestha"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pjob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pfirst_name"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="Software Engineer"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/plocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pjob"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="Balkumari"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/pphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plocation"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="01555789"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/pbio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pphone"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="I am Sriza. I have dimples, I get A+ all the time. I am very small girl. xd omegalul"
+            android:textColor="@color/black" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
